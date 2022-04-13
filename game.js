@@ -454,7 +454,6 @@ Ship = function () {
     }
     if (KEY_STATUS.space) {
       if (this.delayBeforeBullet <= 0) {
-<<<<<<< HEAD
         this.delayBeforeBullet=10;
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
@@ -472,10 +471,6 @@ Ship = function () {
             break;
           }
         }
-=======
-        this.delayBeforeBullet = 10;
-        this.shoot();
->>>>>>> coins
       }
     }
 
@@ -728,7 +723,6 @@ Asteroid = function () {
     if (other.name == "bullet") Game.score += 120 / this.scale;
     this.scale /= 3;
     if (this.scale > 0.5) {
-<<<<<<< HEAD
       // break into fragments
       for (var i = 0; i < 2; i++) {
         var roid = $.extend(true, {}, this);
@@ -741,9 +735,6 @@ Asteroid = function () {
         roid.move(roid.scale * 3); // give them a little push
         Game.sprites.push(roid);
       }
-=======
-      this.breakIntoFragments();
->>>>>>> master
     }
     Game.explosionAt(other.x, other.y);
     this.die();
